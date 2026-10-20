@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAF7F0">
+  <meta name="description" content="Submit your 2025 income tax intake form for Canadian tax filing. New and returning clients welcome.">
+  <title>Submit Your Return — {{BUSINESS_NAME}}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,500;0,600;1,500&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <script src="assets/js/theme.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="app-bar">
+    <div class="app-bar__inner">
+      <a href="index.html" class="logo" aria-label="{{BUSINESS_NAME}} home">
+        <span class="logo__mark" aria-hidden="true"><span class="material-symbols-rounded">account_balance</span></span>
+        <span>Devesh<span class="logo__text-light"> Tax Services</span></span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-desktop">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="documents.html">Documents</a></li>
+          <li><a href="submit.html" aria-current="page">Submit</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="app-bar__actions">
+        <div class="theme-toggle" role="group" aria-label="Theme">
+          <button data-theme-value="system" aria-pressed="true" aria-label="System theme"><span class="material-symbols-rounded">brightness_auto</span></button>
+          <button data-theme-value="light" aria-pressed="false" aria-label="Light theme"><span class="material-symbols-rounded">light_mode</span></button>
+          <button data-theme-value="dark" aria-pressed="false" aria-label="Dark theme"><span class="material-symbols-rounded">dark_mode</span></button>
+        </div>
+        <button class="icon-button" id="openDrawer" aria-label="Open menu" aria-controls="navDrawer" aria-expanded="false">
+          <span class="material-symbols-rounded">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-backdrop" id="navBackdrop"></div>
+  <aside class="nav-drawer" id="navDrawer" aria-label="Navigation menu" aria-hidden="true">
+    <div class="nav-drawer__header">
+      <span class="logo" style="pointer-events:none;"><span class="logo__mark" aria-hidden="true"><span class="material-symbols-rounded">account_balance</span></span><span>Devesh<span class="logo__text-light"> Tax</span></span></span>
+      <button class="icon-button" id="closeDrawer" aria-label="Close menu"><span class="material-symbols-rounded">close</span></button>
+    </div>
+    <nav class="nav-drawer__list" aria-label="Primary mobile">
+      <a href="index.html"><span class="material-symbols-rounded">home</span>Home</a>
+      <a href="documents.html"><span class="material-symbols-rounded">description</span>Documents</a>
+      <a href="submit.html" aria-current="page"><span class="material-symbols-rounded">upload_file</span>Submit</a>
+      <a href="about.html"><span class="material-symbols-rounded">info</span>About</a>
+      <a href="contact.html"><span class="material-symbols-rounded">mail</span>Contact</a>
+    </nav>
+  </aside>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Submit</span>
+        <h1>Start your intake.</h1>
+        <p>Choose the form that matches your situation. You'll receive a Customer ID by email within a few minutes. Use that ID in every subsequent email.</p>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container">
+        <div class="banner banner--gold mb-6">
+          <span class="material-symbols-rounded">shield</span>
+          <div>
+            <strong>Before you start:</strong> Please have your SIN (last 3 digits only for the form) and a record of your slips ready. Do not submit passwords or full SIN through this form. Documents go by email after you receive your Customer ID.
+          </div>
+        </div>
+
+        <!-- Segmented tabs -->
+        <div style="display:flex; justify-content:center; margin-bottom:var(--space-6);">
+          <div class="segmented-lg" role="tablist" aria-label="Select form">
+            <button role="tab" data-form-tab="new" aria-selected="true" id="tabNew">New Client</button>
+            <button role="tab" data-form-tab="returning" aria-selected="false" id="tabReturning">Returning Client</button>
+          </div>
+        </div>
+
+        <!-- New client panel -->
+        <div data-form-panel="new" id="panelNew">
+          <div class="embed-card">
+            <iframe id="newClientIframe" title="New client intake form" loading="lazy"></iframe>
+            <div class="embed-fallback" id="newClientFallback">
+              <span class="material-symbols-rounded icon-xl" style="color:var(--md-sys-color-on-surface-variant);">pending</span>
+              <h4 class="mt-4">New Client form is not yet configured</h4>
+              <p>Publish the Google Form and paste its <code>?embedded=true</code> URL into <code>assets/js/config.js</code> under <code>NEW_CLIENT_FORM_EMBED</code>.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Returning client panel -->
+        <div data-form-panel="returning" id="panelReturning" hidden>
+          <div class="embed-card">
+            <iframe id="returningClientIframe" title="Returning client update form" loading="lazy"></iframe>
+            <div class="embed-fallback" id="returningClientFallback">
+              <span class="material-symbols-rounded icon-xl" style="color:var(--md-sys-color-on-surface-variant);">pending</span>
+              <h4 class="mt-4">Returning Client form is not yet configured</h4>
+              <p>Publish the Google Form and paste its <code>?embedded=true</code> URL into <code>assets/js/config.js</code> under <code>RETURNING_CLIENT_FORM_EMBED</code>.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- What happens next -->
+        <div class="card card--filled mt-8">
+          <h3 class="mb-4" style="font-size:1.125rem;">What happens after you submit</h3>
+          <ul class="list">
+            <li class="list__item" style="background:var(--md-sys-color-surface);">
+              <span class="material-symbols-rounded">mail</span>
+              <div><div class="list__title">1. You'll receive an auto-reply email</div><div class="list__desc">Within a few minutes, containing your unique Customer ID and the exact email subject line to use.</div></div>
+            </li>
+            <li class="list__item" style="background:var(--md-sys-color-surface);">
+              <span class="material-symbols-rounded">attach_file</span>
+              <div><div class="list__title">2. Email your documents</div><div class="list__desc">Send your T4s, T5s, and other slips to <a href="mailto:{{EMAIL}}">{{EMAIL}}</a> with your Customer ID in the subject.</div></div>
+            </li>
+            <li class="list__item" style="background:var(--md-sys-color-surface);">
+              <span class="material-symbols-rounded">payments</span>
+              <div><div class="list__title">3. Pay the fee</div><div class="list__desc">Interac e-Transfer {{SIMPLE_FEE}} to {{E_TRANSFER_EMAIL}}. The security question and answer are in your auto-reply email.</div></div>
+            </li>
+            <li class="list__item" style="background:var(--md-sys-color-surface);">
+              <span class="material-symbols-rounded">task_alt</span>
+              <div><div class="list__title">4. We prepare and file</div><div class="list__desc">We'll confirm receipt, prepare your return, and submit it to CRA. You'll get updates along the way.</div></div>
+            </li>
+          </ul>
+        </div>
+
+        <p class="text-center mt-6" style="font-size:0.875rem; color:var(--md-sys-color-on-surface-variant);">
+          By submitting, you agree to our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <a href="mailto:{{EMAIL}}" class="fab" aria-label="Email us"><span class="material-symbols-rounded">mail</span>Email</a>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="logo" aria-label="{{BUSINESS_NAME}}">
+            <span class="logo__mark" aria-hidden="true"><span class="material-symbols-rounded">account_balance</span></span>
+            <span>Devesh<span class="logo__text-light"> Tax Services</span></span>
+          </a>
+          <p>Registered income tax consultant. Serving Canada remotely from {{SERVICE_AREA}}.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="documents.html">Document checklist</a></li>
+            <li><a href="submit.html">Submit a return</a></li>
+            <li><a href="about.html">About the practice</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>
+            <li><a href="tel:{{PHONE}}">{{PHONE}}</a></li>
+            <li><a href="contact.html">Contact page</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="year">2025</span> {{BUSINESS_NAME}}. All rights reserved.</span>
+        <span>Made in Canada 🇨🇦</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAF7F0">
+  <meta name="description" content="Terms of Use for {{BUSINESS_NAME}} — scope of service, fees, client responsibilities, and legal terms.">
+  <title>Terms of Use — {{BUSINESS_NAME}}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,500;0,600;1,500&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <script src="assets/js/theme.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="app-bar">
+    <div class="app-bar__inner">
+      <a href="index.html" class="logo" aria-label="{{BUSINESS_NAME}} home">
+        <span class="logo__mark" aria-hidden="true"><span class="material-symbols-rounded">account_balance</span></span>
+        <span>Devesh<span class="logo__text-light"> Tax Services</span></span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-desktop">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="documents.html">Documents</a></li>
+          <li><a href="submit.html">Submit</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="app-bar__actions">
+        <div class="theme-toggle" role="group" aria-label="Theme">
+          <button data-theme-value="system" aria-pressed="true" aria-label="System theme"><span class="material-symbols-rounded">brightness_auto</span></button>
+          <button data-theme-value="light" aria-pressed="false" aria-label="Light theme"><span class="material-symbols-rounded">light_mode</span></button>
+          <button data-theme-value="dark" aria-pressed="false" aria-label="Dark theme"><span class="material-symbols-rounded">dark_mode</span></button>
+        </div>
+        <button class="icon-button" id="openDrawer" aria-label="Open menu" aria-controls="navDrawer" aria-expanded="false"><span class="material-symbols-rounded">menu</span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-backdrop" id="navBackdrop"></div>
+  <aside class="nav-drawer" id="navDrawer" aria-label="Navigation menu" aria-hidden="true">
+    <div class="nav-drawer__header">
+      <span class="logo" style="pointer-events:none;"><span class="logo__mark" aria-hidden="true"><span class="material-symbols-rounded">account_balance</span></span><span>Devesh<span class="logo__text-light"> Tax</span></span></span>
+      <button class="icon-button" id="closeDrawer" aria-label="Close menu"><span class="material-symbols-rounded">close</span></button>
+    </div>
+    <nav class="nav-drawer__list" aria-label="Primary mobile">
+      <a href="index.html"><span class="material-symbols-rounded">home</span>Home</a>
+      <a href="documents.html"><span class="material-symbols-rounded">description</span>Documents</a>
+      <a href="submit.html"><span class="material-symbols-rounded">upload_file</span>Submit</a>
+      <a href="about.html"><span class="material-symbols-rounded">info</span>About</a>
+      <a href="contact.html"><span class="material-symbols-rounded">mail</span>Contact</a>
+    </nav>
+  </aside>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Legal</span>
+        <h1>Terms of Use</h1>
+        <p>The terms under which {{BUSINESS_NAME}} provides services through this website.</p>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container">
+        <div class="prose">
+          <p class="updated">Last updated: {{LAST_UPDATED}}</p>
+
+          <h2>1. Who we are</h2>
+          <p>This website is operated by {{BUSINESS_NAME}}, an income tax preparation practice owned and operated by {{OWNER_NAME}}, {{OWNER_CREDENTIAL}}. By accessing this site or submitting information through it, you agree to these Terms of Use.</p>
+
+          <h2>2. Scope of service</h2>
+          <p>{{BUSINESS_NAME}} prepares and files personal Canadian income tax returns. Our standard service covers straightforward returns that include T4, T4A, T4E, T5, T5008, T4FHSA, T2202, RRSP contributions, donation receipts, and related credits.</p>
+          <p>Returns involving the following are <strong>not included</strong> in the standard fee and require a separate quote and arrangement:</p>
+          <ul>
+            <li>Self-employment or business income</li>
+            <li>Rental income</li>
+            <li>Uber, Lyft, DoorDash, and similar platform income</li>
+            <li>Capital gains and losses requiring detailed schedules</li>
+            <li>Foreign income, foreign property over $100,000 (T1135), or foreign tax credits</li>
+            <li>Trust returns, estate returns, or corporate returns</li>
+          </ul>
+          <p>Please contact us at <a href="mailto:{{EMAIL}}">{{EMAIL}}</a> before submitting if your situation falls into any of these categories.</p>
+
+          <h2>3. Fees</h2>
+          <p>The standard fee for a simple personal return is <strong>{{SIMPLE_FEE}} per person, per year</strong>. Payment is due by Interac e-Transfer to <a href="mailto:{{E_TRANSFER_EMAIL}}">{{E_TRANSFER_EMAIL}}</a> before your return is filed. The security question and answer are sent in your auto-reply email after intake and are never posted publicly on this site.</p>
+          <p>We do not begin work until the fee is received. If your return turns out to require services beyond the scope of the standard fee, we will contact you with a quote before proceeding.</p>
+
+          <h2>4. Your responsibilities</h2>
+          <p>You agree to:</p>
+          <ul>
+            <li>Provide complete and accurate information and documents;</li>
+            <li>Promptly respond to requests for missing items;</li>
+            <li>Not withhold information relevant to your return;</li>
+            <li>Review the return we provide before it is filed; and</li>
+            <li>Retain your own copies of documents for at least {{RETENTION_YEARS}} years.</li>
+          </ul>
+          <p>You are responsible for the accuracy of the information you provide. We are not responsible for penalties, interest, or reassessments that result from inaccurate, incomplete, or withheld information.</p>
+
+          <h2>5. Document submission</h2>
+          <p>Documents must be submitted by email to <a href="mailto:{{EMAIL}}">{{EMAIL}}</a> only. We do not accept documents through WhatsApp, SMS, social media messages, or any other channel. Documents sent through channels we have not authorised may not be actioned and may not be secure.</p>
+
+          <h2>6. Email and communication</h2>
+          <p>Email is our primary channel of communication. Email is not end-to-end encrypted. We will not ask for your passwords by email, and you should never send passwords to us. If you receive a suspicious email purporting to be from us, contact us directly using the contact details on this site.</p>
+
+          <h2>7. No guarantee of outcome</h2>
+          <p>We prepare returns in good faith and based on the information and documents you provide. We do not guarantee any particular tax outcome, refund amount, or benefit entitlement. Tax outcomes depend on your circumstances, CRA policies, and applicable law.</p>
+
+          <h2>8. Limitation of liability</h2>
+          <p>To the maximum extent permitted by law, our total liability to you for any claim arising out of or related to our services is limited to the fee you paid for the specific service giving rise to the claim. We are not liable for indirect, incidental, or consequential damages.</p>
+
+          <h2>9. Intellectual property</h2>
+          <p>All content on this website, including text, layout, graphics, and design, is owned by or licensed to {{BUSINESS_NAME}} and may not be copied or redistributed without written permission, except for personal, non-commercial use.</p>
+
+          <h2>10. Third-party services</h2>
+          <p>We use Google Forms, Google Sheets, and Gmail to operate parts of our service. Your use of those services is also subject to Google's terms and privacy policies. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
+
+          <h2>11. Governing law</h2>
+          <p>These Terms are governed by the laws of the Province of Ontario and the federal laws of Canada applicable therein. Any dispute will be resolved in the courts of Ontario.</p>
+
+          <h2>12. Changes</h2>
+          <p>We may update these Terms from time to time. The current version will always be posted on this page with the "last updated" date at the top. Continued use of the site after changes constitutes acceptance.</p>
+
+          <h2>13. Contact</h2>
+          <p>{{BUSINESS_NAME}}<br>
+          Email: <a href="mailto:{{EMAIL}}">{{EMAIL}}</a><br>
+          Phone: {{PHONE}}</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="logo" aria-label="{{BUSINESS_NAME}}">
+            <span class="logo__mark" aria-hidden="true"><span class="material-symbols-rounded">account_balance</span></span>
+            <span>Devesh<span class="logo__text-light"> Tax Services</span></span>
+          </a>
+          <p>Registered income tax consultant. Serving Canada remotely from {{SERVICE_AREA}}.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="documents.html">Document checklist</a></li>
+            <li><a href="submit.html">Submit a return</a></li>
+            <li><a href="about.html">About the practice</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>
+            <li><a href="tel:{{PHONE}}">{{PHONE}}</a></li>
+            <li><a href="contact.html">Contact page</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="year">2025</span> {{BUSINESS_NAME}}. All rights reserved.</span>
+        <span>Made in Canada 🇨🇦</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

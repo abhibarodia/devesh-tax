@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAF7F0">
+  <meta name="description" content="Contact {{BUSINESS_NAME}} — email, phone, and office hours. We do not accept sensitive documents via WhatsApp or text.">
+  <title>Contact — {{BUSINESS_NAME}}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,500;0,600;1,500&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <script src="assets/js/theme.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="app-bar">
+    <div class="app-bar__inner">
+      <a href="index.html" class="logo" aria-label="{{BUSINESS_NAME}} home">
+        <span class="logo__mark" aria-hidden="true"><span class="material-symbols-rounded">account_balance</span></span>
+        <span>Devesh<span class="logo__text-light"> Tax Services</span></span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-desktop">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="documents.html">Documents</a></li>
+          <li><a href="submit.html">Submit</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="app-bar__actions">
+        <div class="theme-toggle" role="group" aria-label="Theme">
+          <button data-theme-value="system" aria-pressed="true" aria-label="System theme"><span class="material-symbols-rounded">brightness_auto</span></button>
+          <button data-theme-value="light" aria-pressed="false" aria-label="Light theme"><span class="material-symbols-rounded">light_mode</span></button>
+          <button data-theme-value="dark" aria-pressed="false" aria-label="Dark theme"><span class="material-symbols-rounded">dark_mode</span></button>
+        </div>
+        <button class="icon-button" id="openDrawer" aria-label="Open menu" aria-controls="navDrawer" aria-expanded="false"><span class="material-symbols-rounded">menu</span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-backdrop" id="navBackdrop"></div>
+  <aside class="nav-drawer" id="navDrawer" aria-label="Navigation menu" aria-hidden="true">
+    <div class="nav-drawer__header">
+      <span class="logo" style="pointer-events:none;"><span class="logo__mark" aria-hidden="true"><span class="material-symbols-rounded">account_balance</span></span><span>Devesh<span class="logo__text-light"> Tax</span></span></span>
+      <button class="icon-button" id="closeDrawer" aria-label="Close menu"><span class="material-symbols-rounded">close</span></button>
+    </div>
+    <nav class="nav-drawer__list" aria-label="Primary mobile">
+      <a href="index.html"><span class="material-symbols-rounded">home</span>Home</a>
+      <a href="documents.html"><span class="material-symbols-rounded">description</span>Documents</a>
+      <a href="submit.html"><span class="material-symbols-rounded">upload_file</span>Submit</a>
+      <a href="about.html"><span class="material-symbols-rounded">info</span>About</a>
+      <a href="contact.html" aria-current="page"><span class="material-symbols-rounded">mail</span>Contact</a>
+    </nav>
+  </aside>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Contact</span>
+        <h1>Get in touch.</h1>
+        <p>Prefer email? That's the fastest way to reach us — especially for anything involving documents or personal details.</p>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container">
+        <div class="grid grid--2">
+          <article class="card card--elevated">
+            <div class="card__icon"><span class="material-symbols-rounded">mail</span></div>
+            <h2 style="font-size:1.25rem; margin-bottom:var(--space-2);">Email</h2>
+            <p class="card__body mb-4">Primary channel for all enquiries, document submissions, and follow-ups.</p>
+            <div class="chip-row">
+              <button class="chip chip--primary" data-copy="{{EMAIL}}">
+                <span class="material-symbols-rounded">content_copy</span>{{EMAIL}}
+              </button>
+            </div>
+            <a href="mailto:{{EMAIL}}" class="btn btn--filled mt-6">Open email app</a>
+          </article>
+
+          <article class="card card--elevated">
+            <div class="card__icon"><span class="material-symbols-rounded">call</span></div>
+            <h2 style="font-size:1.25rem; margin-bottom:var(--space-2);">Phone</h2>
+            <p class="card__body mb-4">Call during office hours for scheduling or brief questions. Please do not text documents.</p>
+            <div class="chip-row">
+              <button class="chip chip--primary" data-copy="{{PHONE}}">
+                <span class="material-symbols-rounded">content_copy</span>{{PHONE}}
+              </button>
+            </div>
+            <a href="tel:{{PHONE}}" class="btn btn--outlined mt-6">Call now</a>
+          </article>
+        </div>
+
+        <div class="card card--filled mt-8">
+          <h2 style="font-size:1.25rem; margin-bottom:var(--space-4);">Hours</h2>
+          <table style="width:100%; border-collapse:collapse;">
+            <thead>
+              <tr style="border-bottom:1px solid var(--md-sys-color-outline-variant);">
+                <th style="text-align:left; padding:12px 0; font-weight:600; font-size:0.875rem; color:var(--md-sys-color-on-surface-variant); text-transform:uppercase; letter-spacing:0.05em;">Day</th>
+                <th style="text-align:left; padding:12px 0; font-weight:600; font-size:0.875rem; color:var(--md-sys-color-on-surface-variant); text-transform:uppercase; letter-spacing:0.05em;">Hours</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding:14px 0; font-weight:500;">Monday – Friday</td>
+                <td style="padding:14px 0; color:var(--md-sys-color-on-surface-variant);">9:00 AM – 6:00 PM ET</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding:14px 0; font-weight:500;">Saturday</td>
+                <td style="padding:14px 0; color:var(--md-sys-color-on-surface-variant);">10:00 AM – 2:00 PM ET</td>
+              </tr>
+              <tr>
+                <td style="padding:14px 0; font-weight:500;">Sunday</td>
+                <td style="padding:14px 0; color:var(--md-sys-color-on-surface-variant);">Closed</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="banner banner--gold mt-8">
+          <span class="material-symbols-rounded">warning</span>
+          <div><strong>Please do not send documents by WhatsApp or SMS.</strong> These channels are not secure enough for tax slips, SIN papers, or other personal information. Documents must be emailed to <a href="mailto:{{EMAIL}}">{{EMAIL}}</a> only.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a href="mailto:{{EMAIL}}" class="fab" aria-label="Email us"><span class="material-symbols-rounded">mail</span>Email</a>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="logo" aria-label="{{BUSINESS_NAME}}">
+            <span class="logo__mark" aria-hidden="true"><span class="material-symbols-rounded">account_balance</span></span>
+            <span>Devesh<span class="logo__text-light"> Tax Services</span></span>
+          </a>
+          <p>Registered income tax consultant. Serving Canada remotely from {{SERVICE_AREA}}.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="documents.html">Document checklist</a></li>
+            <li><a href="submit.html">Submit a return</a></li>
+            <li><a href="about.html">About the practice</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>
+            <li><a href="tel:{{PHONE}}">{{PHONE}}</a></li>
+            <li><a href="contact.html">Contact page</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="year">2025</span> {{BUSINESS_NAME}}. All rights reserved.</span>
+        <span>Made in Canada 🇨🇦</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

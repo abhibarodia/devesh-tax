@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAF7F0">
+  <meta name="description" content="Privacy Policy for {{BUSINESS_NAME}} — PIPEDA-compliant disclosure of data collection, storage, and rights.">
+  <title>Privacy Policy — {{BUSINESS_NAME}}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,500;0,600;1,500&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <script src="assets/js/theme.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="app-bar">
+    <div class="app-bar__inner">
+      <a href="index.html" class="logo" aria-label="{{BUSINESS_NAME}} home">
+        <span class="logo__mark" aria-hidden="true"><span class="material-symbols-rounded">account_balance</span></span>
+        <span>Devesh<span class="logo__text-light"> Tax Services</span></span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-desktop">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="documents.html">Documents</a></li>
+          <li><a href="submit.html">Submit</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="app-bar__actions">
+        <div class="theme-toggle" role="group" aria-label="Theme">
+          <button data-theme-value="system" aria-pressed="true" aria-label="System theme"><span class="material-symbols-rounded">brightness_auto</span></button>
+          <button data-theme-value="light" aria-pressed="false" aria-label="Light theme"><span class="material-symbols-rounded">light_mode</span></button>
+          <button data-theme-value="dark" aria-pressed="false" aria-label="Dark theme"><span class="material-symbols-rounded">dark_mode</span></button>
+        </div>
+        <button class="icon-button" id="openDrawer" aria-label="Open menu" aria-controls="navDrawer" aria-expanded="false"><span class="material-symbols-rounded">menu</span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-backdrop" id="navBackdrop"></div>
+  <aside class="nav-drawer" id="navDrawer" aria-label="Navigation menu" aria-hidden="true">
+    <div class="nav-drawer__header">
+      <span class="logo" style="pointer-events:none;"><span class="logo__mark" aria-hidden="true"><span class="material-symbols-rounded">account_balance</span></span><span>Devesh<span class="logo__text-light"> Tax</span></span></span>
+      <button class="icon-button" id="closeDrawer" aria-label="Close menu"><span class="material-symbols-rounded">close</span></button>
+    </div>
+    <nav class="nav-drawer__list" aria-label="Primary mobile">
+      <a href="index.html"><span class="material-symbols-rounded">home</span>Home</a>
+      <a href="documents.html"><span class="material-symbols-rounded">description</span>Documents</a>
+      <a href="submit.html"><span class="material-symbols-rounded">upload_file</span>Submit</a>
+      <a href="about.html"><span class="material-symbols-rounded">info</span>About</a>
+      <a href="contact.html"><span class="material-symbols-rounded">mail</span>Contact</a>
+    </nav>
+  </aside>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Legal</span>
+        <h1>Privacy Policy</h1>
+        <p>How {{BUSINESS_NAME}} collects, uses, stores, and protects your personal information.</p>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container">
+        <div class="prose">
+          <p class="updated">Last updated: {{LAST_UPDATED}}</p>
+
+          <h2>1. Who we are</h2>
+          <p>{{BUSINESS_NAME}} ("we", "us", "our") is an income tax preparation practice operated by {{OWNER_NAME}}, {{OWNER_CREDENTIAL}}, based in {{SERVICE_AREA}}. For the purposes of the <em>Personal Information Protection and Electronic Documents Act</em> (PIPEDA) and applicable provincial privacy laws, {{PRIVACY_OFFICER_NAME}} is our Privacy Officer.</p>
+
+          <h2>2. Information we collect</h2>
+          <p>We collect personal information only as needed to prepare and file your income tax return and to comply with our obligations to the Canada Revenue Agency (CRA). This may include:</p>
+          <ul>
+            <li><strong>Identity information:</strong> first name, surname, date of birth, marital status, and the last three digits of your Social Insurance Number (SIN).</li>
+            <li><strong>Contact information:</strong> email address, phone number, and mailing address.</li>
+            <li><strong>Financial information:</strong> T4, T4A, T4E, T5, T5008, T4FHSA, T2202, RRSP contribution receipts, donation receipts, property tax bills, and rent receipts or leases.</li>
+            <li><strong>Immigration information:</strong> your arrival date in Canada, and your spouse's arrival date if applicable.</li>
+            <li><strong>Sensitive documents:</strong> a copy of your SIN paper, a void cheque or direct deposit slip, and your prior year Notice of Assessment (if provided).</li>
+          </ul>
+
+          <h2>3. How we collect it</h2>
+          <p>We collect information through:</p>
+          <ul>
+            <li><strong>Google Forms:</strong> the intake form used to capture the structured details we need to begin your return. Google Forms is operated by Google LLC.</li>
+            <li><strong>Google Sheets:</strong> the internal record where your intake responses are stored. Google Sheets is operated by Google LLC.</li>
+            <li><strong>Email:</strong> documents and correspondence you send to {{EMAIL}}. Email is operated by Google (Gmail).</li>
+          </ul>
+
+          <h2>4. Data residency and third-party processors</h2>
+          <p>We use Google services (Google Forms, Google Sheets, Gmail) as our primary processors. Google may store your information on servers located outside Canada, including in the United States. Under PIPEDA, cross-border transfers are permitted where the organization has disclosed them, obtained consent, and implemented comparable safeguards. Google's own privacy commitments and security practices apply to its infrastructure. We do not control Google's data centres or government access to them.</p>
+
+          <h2>5. How we use your information</h2>
+          <p>We use your personal information to:</p>
+          <ul>
+            <li>Prepare and file your income tax return with the CRA;</li>
+            <li>Communicate with you about your return;</li>
+            <li>Communicate with the CRA on your behalf;</li>
+            <li>Comply with our legal and professional obligations;</li>
+            <li>Maintain records as required by the <em>Income Tax Act</em>; and</li>
+            <li>Respond to your enquiries and requests.</li>
+          </ul>
+          <p>We do not sell, rent, or trade your personal information. We do not use your information for marketing without your express consent.</p>
+
+          <h2>6. Consent</h2>
+          <p>By submitting the intake form, you consent to our collection, use, and disclosure of your personal information as described in this policy. You may withdraw consent at any time, subject to legal and contractual restrictions and reasonable notice. Withdrawing consent may mean we can no longer prepare or file your return.</p>
+
+          <h2>7. Email is not end-to-end encrypted</h2>
+          <p>Email is a practical and widely-used channel, but it is not end-to-end encrypted. We ask that you <strong>do not send passwords</strong> and that you send only the documents we need. If you are uncomfortable emailing a sensitive document, contact us to arrange an alternative.</p>
+
+          <h2>8. Full Social Insurance Number</h2>
+          <p>We do not ask for your full SIN through the online form. The intake form asks only for the last three digits. Your full SIN (for example, on your SIN paper) may be provided by email because it is required to file your return. We retain it only as long as needed and do not share it with anyone other than the CRA.</p>
+
+          <h2>9. Security safeguards</h2>
+          <p>We protect your information with reasonable administrative, technical, and physical safeguards, including:</p>
+          <ul>
+            <li>Two-factor authentication on the Google account we use for intake and email;</li>
+            <li>Access limited to {{OWNER_NAME}} and any staff directly involved in preparing your return;</li>
+            <li>Secure, password-protected devices; and</li>
+            <li>Regular review of access to client records.</li>
+          </ul>
+          <p>No system is 100% secure. We cannot guarantee the security of information transmitted over the internet.</p>
+
+          <h2>10. Retention</h2>
+          <p>We retain your records for {{RETENTION_YEARS}} years from the end of the taxation year to which they relate, as required by the <em>Income Tax Act</em>, unless a longer period is required by law. When records are no longer required, we securely destroy them.</p>
+
+          <h2>11. Your rights</h2>
+          <p>Under PIPEDA you have the right to:</p>
+          <ul>
+            <li>Access the personal information we hold about you;</li>
+            <li>Request correction of inaccurate information;</li>
+            <li>Withdraw consent (with the limitations described above);</li>
+            <li>Request deletion of information we are not legally required to retain; and</li>
+            <li>File a complaint with the Office of the Privacy Commissioner of Canada.</li>
+          </ul>
+          <p>To exercise any of these rights, contact our Privacy Officer at <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>. We will respond within 30 days.</p>
+
+          <h2>12. Children</h2>
+          <p>Our services are not directed to children under 18. We do not knowingly collect personal information from children.</p>
+
+          <h2>13. Changes to this policy</h2>
+          <p>We may update this policy from time to time. The current version will always be posted on this page, with the "last updated" date at the top.</p>
+
+          <h2>14. Contact</h2>
+          <p>Privacy Officer: {{PRIVACY_OFFICER_NAME}}<br>
+          Email: <a href="mailto:{{EMAIL}}">{{EMAIL}}</a><br>
+          Phone: {{PHONE}}</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="logo" aria-label="{{BUSINESS_NAME}}">
+            <span class="logo__mark" aria-hidden="true"><span class="material-symbols-rounded">account_balance</span></span>
+            <span>Devesh<span class="logo__text-light"> Tax Services</span></span>
+          </a>
+          <p>Registered income tax consultant. Serving Canada remotely from {{SERVICE_AREA}}.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="documents.html">Document checklist</a></li>
+            <li><a href="submit.html">Submit a return</a></li>
+            <li><a href="about.html">About the practice</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>
+            <li><a href="tel:{{PHONE}}">{{PHONE}}</a></li>
+            <li><a href="contact.html">Contact page</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="year">2025</span> {{BUSINESS_NAME}}. All rights reserved.</span>
+        <span>Made in Canada 🇨🇦</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

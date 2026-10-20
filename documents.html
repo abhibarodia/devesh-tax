@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAF7F0">
+  <meta name="description" content="Tax document checklist for Canadian income tax filing — T4, T4A, T4E, T5, T5008, T2202, T4FHSA, RRSP, rent receipts, and more.">
+  <title>Document Checklist — {{BUSINESS_NAME}}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,500;0,600;1,500&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <script src="assets/js/theme.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="app-bar">
+    <div class="app-bar__inner">
+      <a href="index.html" class="logo" aria-label="{{BUSINESS_NAME}} home">
+        <span class="logo__mark" aria-hidden="true"><span class="material-symbols-rounded">account_balance</span></span>
+        <span>Devesh<span class="logo__text-light"> Tax Services</span></span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-desktop">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="documents.html" aria-current="page">Documents</a></li>
+          <li><a href="submit.html">Submit</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="app-bar__actions">
+        <div class="theme-toggle" role="group" aria-label="Theme">
+          <button data-theme-value="system" aria-pressed="true" aria-label="System theme"><span class="material-symbols-rounded">brightness_auto</span></button>
+          <button data-theme-value="light" aria-pressed="false" aria-label="Light theme"><span class="material-symbols-rounded">light_mode</span></button>
+          <button data-theme-value="dark" aria-pressed="false" aria-label="Dark theme"><span class="material-symbols-rounded">dark_mode</span></button>
+        </div>
+        <a href="submit.html" class="btn btn--filled app-bar__cta">Start Your Return</a>
+        <button class="icon-button" id="openDrawer" aria-label="Open menu" aria-controls="navDrawer" aria-expanded="false">
+          <span class="material-symbols-rounded">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-backdrop" id="navBackdrop"></div>
+  <aside class="nav-drawer" id="navDrawer" aria-label="Navigation menu" aria-hidden="true">
+    <div class="nav-drawer__header">
+      <span class="logo" style="pointer-events:none;"><span class="logo__mark" aria-hidden="true"><span class="material-symbols-rounded">account_balance</span></span><span>Devesh<span class="logo__text-light"> Tax</span></span></span>
+      <button class="icon-button" id="closeDrawer" aria-label="Close menu"><span class="material-symbols-rounded">close</span></button>
+    </div>
+    <nav class="nav-drawer__list" aria-label="Primary mobile">
+      <a href="index.html"><span class="material-symbols-rounded">home</span>Home</a>
+      <a href="documents.html" aria-current="page"><span class="material-symbols-rounded">description</span>Documents</a>
+      <a href="submit.html"><span class="material-symbols-rounded">upload_file</span>Submit</a>
+      <a href="about.html"><span class="material-symbols-rounded">info</span>About</a>
+      <a href="contact.html"><span class="material-symbols-rounded">mail</span>Contact</a>
+    </nav>
+  </aside>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Documents</span>
+        <h1>What to gather before you file.</h1>
+        <p>Use this checklist to make sure you have everything we need. You don't need every item — only the ones that apply to your situation.</p>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container">
+        <div class="banner mb-6">
+          <span class="material-symbols-rounded">info</span>
+          <div>
+            <strong>How to send documents:</strong> After submitting the intake form and receiving your Customer ID, email all files to <a href="mailto:{{EMAIL}}">{{EMAIL}}</a> with the subject line <code>[Customer ID] – [Surname] – 2025 Tax Documents</code>. We do not accept documents by WhatsApp or text.
+          </div>
+        </div>
+
+        <div class="chip-row mb-6" role="group" aria-label="Filter categories">
+          <button class="chip chip--primary" data-doc-filter="all" aria-pressed="true">All</button>
+          <button class="chip" data-doc-filter="income" aria-pressed="false"><span class="material-symbols-rounded">payments</span>Income</button>
+          <button class="chip" data-doc-filter="deductions" aria-pressed="false"><span class="material-symbols-rounded">savings</span>Deductions & Credits</button>
+          <button class="chip" data-doc-filter="identity" aria-pressed="false"><span class="material-symbols-rounded">badge</span>Identity</button>
+        </div>
+
+        <div data-doc-group="income">
+          <h2 class="mb-4" style="font-size:1.25rem;">Income slips</h2>
+          <ul class="list mb-8">
+            <li class="list__item">
+              <span class="material-symbols-rounded">description</span>
+              <div><div class="list__title">T4 — Statement of Remuneration Paid</div><div class="list__desc">From every employer you worked for in 2025.</div></div>
+            </li>
+            <li class="list__item">
+              <span class="material-symbols-rounded">description</span>
+              <div><div class="list__title">T4A — Pension, retirement, or other income</div><div class="list__desc">Pension income, RESP educational assistance, self-employed commissions, and other income reported on a T4A.</div></div>
+            </li>
+            <li class="list__item">
+              <span class="material-symbols-rounded">description</span>
+              <div><div class="list__title">T4E — Employment Insurance benefits</div><div class="list__desc">If you received EI benefits during the year.</div></div>
+            </li>
+            <li class="list__item">
+              <span class="material-symbols-rounded">description</span>
+              <div><div class="list__title">T5 — Investment income</div><div class="list__desc">Interest, dividends, and other investment income from banks or brokerages.</div></div>
+            </li>
+            <li class="list__item">
+              <span class="material-symbols-rounded">description</span>
+              <div><div class="list__title">T5008 — Securities transactions</div><div class="list__desc">Statement of securities transactions (stock sales, mutual funds, ETFs).</div></div>
+            </li>
+            <li class="list__item">
+              <span class="material-symbols-rounded">description</span>
+              <div><div class="list__title">T4FHSA — First Home Savings Account</div><div class="list__desc">If you contributed to an FHSA during 2025.</div></div>
+            </li>
+          </ul>
+        </div>
+
+        <div data-doc-group="deductions">
+          <h2 class="mb-4" style="font-size:1.25rem;">Deductions & credits</h2>
+          <ul class="list mb-8">
+            <li class="list__item">
+              <span class="material-symbols-rounded">description</span>
+              <div><div class="list__title">RRSP contribution receipts</div><div class="list__desc">Official receipts from your financial institution for RRSP contributions.</div></div>
+            </li>
+            <li class="list__item">
+              <span class="material-symbols-rounded">description</span>
+              <div><div class="list__title">T2202 — Tuition and enrolment certificate</div><div class="list__desc">From your college or university for eligible tuition fees.</div></div>
+            </li>
+            <li class="list__item">
+              <span class="material-symbols-rounded">description</span>
+              <div><div class="list__title">Donation receipts</div><div class="list__desc">Official receipts from registered charities.</div></div>
+            </li>
+            <li class="list__item">
+              <span class="material-symbols-rounded">description</span>
+              <div><div class="list__title">Property tax bill</div><div class="list__desc">If you own residential property and paid property tax in 2025.</div></div>
+            </li>
+            <li class="list__item">
+              <span class="material-symbols-rounded">description</span>
+              <div><div class="list__title">Rent receipts or lease (Ontario only)</div><div class="list__desc">For the Ontario Trillium Benefit. You'll also need your landlord's name and address. CRA may ask for these later.</div></div>
+            </li>
+          </ul>
+        </div>
+
+        <div data-doc-group="identity">
+          <h2 class="mb-4" style="font-size:1.25rem;">Identity & direct deposit</h2>
+          <ul class="list">
+            <li class="list__item">
+              <span class="material-symbols-rounded">description</span>
+              <div><div class="list__title">SIN paper or confirmation</div><div class="list__desc">A copy of your Social Insurance Number paper. <strong>Do not send your full SIN through the online form</strong> — only by email after intake.</div></div>
+            </li>
+            <li class="list__item">
+              <span class="material-symbols-rounded">description</span>
+              <div><div class="list__title">Void cheque or direct deposit slip</div><div class="list__desc">So CRA can deposit your refund (or receive a payment) directly to your bank account.</div></div>
+            </li>
+            <li class="list__item">
+              <span class="material-symbols-rounded">description</span>
+              <div><div class="list__title">Previous year Notice of Assessment (if any)</div><div class="list__desc">Helps confirm carry-forward amounts such as RRSP room and tuition credits.</div></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="banner banner--gold mt-8">
+          <span class="material-symbols-rounded">lock</span>
+          <div>
+            <strong>Privacy note:</strong> Email is not end-to-end encrypted. Do not send passwords. If you're uncomfortable emailing a sensitive document, contact us to arrange an alternative. See our <a href="privacy.html">Privacy Policy</a> for how we handle your information.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a href="mailto:{{EMAIL}}" class="fab" aria-label="Email us">
+    <span class="material-symbols-rounded">mail</span>Email
+  </a>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="logo" aria-label="{{BUSINESS_NAME}}">
+            <span class="logo__mark" aria-hidden="true"><span class="material-symbols-rounded">account_balance</span></span>
+            <span>Devesh<span class="logo__text-light"> Tax Services</span></span>
+          </a>
+          <p>Registered income tax consultant. Serving Canada remotely from {{SERVICE_AREA}}.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="documents.html">Document checklist</a></li>
+            <li><a href="submit.html">Submit a return</a></li>
+            <li><a href="about.html">About the practice</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>
+            <li><a href="tel:{{PHONE}}">{{PHONE}}</a></li>
+            <li><a href="contact.html">Contact page</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="year">2025</span> {{BUSINESS_NAME}}. All rights reserved.</span>
+        <span>Made in Canada 🇨🇦</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
