@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
   <meta name="theme-color" content="#FAF7F0">
   <meta name="description" content="Terms of Use for {{BUSINESS_NAME}} — scope of service, fees, client responsibilities, and legal terms.">
   <title>Terms of Use — {{BUSINESS_NAME}}</title>
@@ -12,11 +13,8 @@
   <link rel="stylesheet" href="assets/css/tokens.css">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/components.css">
-  <script src="assets/js/theme.js"></script>
 </head>
 <body>
-  <!-- <a class="skip-link" href="#main">Skip to content</a> -->
-
   <header class="app-bar">
     <div class="app-bar__inner">
       <a href="index.html" class="logo" aria-label="{{BUSINESS_NAME}} home">
@@ -33,11 +31,8 @@
         </ul>
       </nav>
       <div class="app-bar__actions">
-        <div class="theme-toggle" role="group" aria-label="Theme">
-          <button data-theme-value="system" aria-pressed="true" aria-label="System theme"><span class="material-symbols-rounded">brightness_auto</span></button>
-          <button data-theme-value="light" aria-pressed="false" aria-label="Light theme"><span class="material-symbols-rounded">light_mode</span></button>
-          <button data-theme-value="dark" aria-pressed="false" aria-label="Dark theme"><span class="material-symbols-rounded">dark_mode</span></button>
-        </div>
+        <!-- Hidden button maintains flexbox spacing so the menu never shifts left/right -->
+        <a href="submit.html" class="btn btn--filled app-bar__cta" style="visibility: hidden;" tabindex="-1" aria-hidden="true">Start Your Return</a>
         <button class="icon-button" id="openDrawer" aria-label="Open menu" aria-controls="navDrawer" aria-expanded="false"><span class="material-symbols-rounded">menu</span></button>
       </div>
     </div>

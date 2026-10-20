@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
   <meta name="theme-color" content="#FAF7F0">
   <meta name="description" content="Tax document checklist for Canadian income tax filing — T4, T4A, T4E, T5, T5008, T2202, T4FHSA, RRSP, rent receipts, and more.">
   <title>Document Checklist — {{BUSINESS_NAME}}</title>
@@ -12,11 +13,8 @@
   <link rel="stylesheet" href="assets/css/tokens.css">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/components.css">
-  <script src="assets/js/theme.js"></script>
 </head>
 <body>
-  <!-- <a class="skip-link" href="#main">Skip to content</a> -->
-
   <header class="app-bar">
     <div class="app-bar__inner">
       <a href="index.html" class="logo" aria-label="{{BUSINESS_NAME}} home">
@@ -33,11 +31,6 @@
         </ul>
       </nav>
       <div class="app-bar__actions">
-        <div class="theme-toggle" role="group" aria-label="Theme">
-          <button data-theme-value="system" aria-pressed="true" aria-label="System theme"><span class="material-symbols-rounded">brightness_auto</span></button>
-          <button data-theme-value="light" aria-pressed="false" aria-label="Light theme"><span class="material-symbols-rounded">light_mode</span></button>
-          <button data-theme-value="dark" aria-pressed="false" aria-label="Dark theme"><span class="material-symbols-rounded">dark_mode</span></button>
-        </div>
         <a href="submit.html" class="btn btn--filled app-bar__cta">Start Your Return</a>
         <button class="icon-button" id="openDrawer" aria-label="Open menu" aria-controls="navDrawer" aria-expanded="false">
           <span class="material-symbols-rounded">menu</span>
@@ -80,11 +73,11 @@
         </div>
 
         <div class="chip-row mb-6" role="group" aria-label="Filter categories">
-          <button class="chip chip--primary" data-doc-filter="all" aria-pressed="true">All</button>
-          <button class="chip" data-doc-filter="income" aria-pressed="false"><span class="material-symbols-rounded">payments</span>Income</button>
-          <button class="chip" data-doc-filter="deductions" aria-pressed="false"><span class="material-symbols-rounded">savings</span>Deductions & Credits</button>
-          <button class="chip" data-doc-filter="identity" aria-pressed="false"><span class="material-symbols-rounded">badge</span>Identity</button>
-        </div>
+		  <button class="chip" data-doc-filter="all" aria-pressed="true">All</button> <!-- Removed chip--primary here -->
+		  <button class="chip" data-doc-filter="income" aria-pressed="false"><span class="material-symbols-rounded">payments</span>Income</button>
+		  <button class="chip" data-doc-filter="deductions" aria-pressed="false"><span class="material-symbols-rounded">savings</span>Deductions & Credits</button>
+		  <button class="chip" data-doc-filter="identity" aria-pressed="false"><span class="material-symbols-rounded">badge</span>Identity</button>
+		</div>
 
         <div data-doc-group="income">
           <h2 class="mb-4" style="font-size:1.25rem;">Income slips</h2>

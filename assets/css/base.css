@@ -121,19 +121,6 @@ small, .caption {
   clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
 }
 
-/* ------------------------------
-.skip-link {
-  position: absolute; top: -40px; left: 8px;
-  background: var(--md-sys-color-primary);
-  color: var(--md-sys-color-on-primary);
-  padding: 8px 16px;
-  border-radius: var(--md-sys-shape-corner-sm);
-  z-index: 1000;
-  font-weight: 600;
-}
-.skip-link:focus { top: 8px; }
-------------------------------- */
-
 .text-center { text-align: center; }
 .mt-4 { margin-top: var(--space-4); }
 .mt-6 { margin-top: var(--space-6); }
